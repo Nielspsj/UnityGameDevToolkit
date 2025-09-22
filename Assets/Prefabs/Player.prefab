@@ -155,8 +155,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dded819177a03c448910a6fae6260503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  swerveMode: 1
-  panSpeed: 5
+  swerveMode: 0
+  panDistance: 1
   maxPanX: 3
   turnSpeed: 10
 --- !u!114 &440359445249682475
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2055574604744517628}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cc3d2b0c9df098040b4b5d6fa19ef350, type: 3}
   m_Name: 

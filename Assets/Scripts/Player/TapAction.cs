@@ -7,8 +7,16 @@ public class TapAction : MonoBehaviour
 
     private Rigidbody rb;
 
-    private void Awake() => rb = GetComponent<Rigidbody>();
-
+    private void Awake()
+    {
+        if (InputManager.Instance != null)
+        {
+            InputManager.Instance.OnTap.AddListener(Jump);
+            //Debug.Log("adding listener");
+        }
+        rb = GetComponent<Rigidbody>();
+    }    
+    /*
     private void OnEnable()
     {
         if (InputManager.Instance != null)
@@ -17,7 +25,7 @@ public class TapAction : MonoBehaviour
             //Debug.Log("adding listener");
         }
     }
-
+    */
     private void OnDisable()
     {
         if (InputManager.Instance != null)

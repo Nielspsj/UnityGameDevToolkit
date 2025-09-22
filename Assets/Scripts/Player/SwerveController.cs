@@ -23,16 +23,22 @@ public class SwerveController : MonoBehaviour
     private float turnSpeed = 10f; // Rotation speed when turning
     private Quaternion targetRotation;
 
-    private void OnEnable()
+
+
+    private void Awake()
     {
         if (InputManager.Instance != null)
+        {
             InputManager.Instance.OnSwipe.AddListener(HandleSwipe);
+        }
     }
 
     private void OnDisable()
     {
         if (InputManager.Instance != null)
+        {
             InputManager.Instance.OnSwipe.RemoveListener(HandleSwipe);
+        }
     }
 
     private void Start()
