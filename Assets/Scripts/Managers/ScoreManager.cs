@@ -3,9 +3,12 @@ using TMPro;
 
 public class ScoreManager : MonoBehaviour
 {
+    [TextArea(1, 10)]
+    [SerializeField]
+    private string helpInfo = "Drag this object into the scene. \n" + "Attach the score text object into the inspector below.";
     public static ScoreManager Instance { get; private set; }
 
-    [SerializeField, Tooltip("Text UI for score + highscore display")]
+    [SerializeField, Header("Text UI for score + highscore display")]
     private TextMeshProUGUI scoreText;
 
     private int score = 0;
@@ -40,6 +43,8 @@ public class ScoreManager : MonoBehaviour
     private void UpdateUI()
     {
         if (scoreText != null)
+        {
             scoreText.text = $"Score: {score}\nHigh: {highscore}";
+        }
     }
 }

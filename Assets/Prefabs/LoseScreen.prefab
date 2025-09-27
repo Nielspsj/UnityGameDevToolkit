@@ -255,6 +255,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79f622c6154169418a590087076cfa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  helpInfo: Drag the object into the scene. Add to OnGameLose event in GameStateManager
+    inspector.
 --- !u!1 &2009741435838423486
 GameObject:
   m_ObjectHideFlags: 0

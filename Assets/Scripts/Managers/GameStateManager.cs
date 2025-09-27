@@ -6,6 +6,9 @@ public enum GameState { Playing, Won, Lost }
 
 public class GameStateManager : MonoBehaviour
 {
+    [TextArea(1, 10)]
+    [SerializeField]
+    private string helpInfo = "Put me on the player";
     public static GameStateManager Instance { get; private set; }
 
     [Header("Events (Add in the Inspector UI screens, ForwardRunner etc.)")]

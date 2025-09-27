@@ -2,24 +2,28 @@ using UnityEngine;
 
 public class SwerveController : MonoBehaviour
 {
-    
+    [TextArea(1, 10)]
+    [SerializeField]
+    private string helpInfo = "Put me on the player";
+
+
     public enum SwerveMode
     {
         Pan,   // Smooth side-to-side movement
         Turn   // Snap 90° turns
     }
 
-    [SerializeField, Tooltip("Switch between swerve modes")]
+    [SerializeField, Header("Switch between swerve modes")]
     private SwerveMode swerveMode = SwerveMode.Pan; // Switch mode in Inspector
 
-    [Header("Pan Settings")]
-    [SerializeField, Tooltip("How far the player moves sideways")]
+    [Header("Pan Settings:")]
+    [SerializeField, Header("How far the player moves sideways")]
     private float panDistance = 1f;
-    [SerializeField, Tooltip("Clamp movement within this X range to prevent from moving out of area")]
+    [SerializeField, Header("Maximum X distance in either direction")]
     private float maxPanX = 3f;
 
-    [Header("Turn Settings")]
-    [SerializeField, Tooltip("How fast the player rotates")]
+    [Header("Turn Settings:")]
+    [SerializeField, Header("How fast the player rotates")]
     private float turnSpeed = 10f; // Rotation speed when turning
     private Quaternion targetRotation;
 

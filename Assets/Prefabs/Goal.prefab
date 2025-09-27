@@ -153,3 +153,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09f46fe2b94369047925ae3693b9c1af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  info: Place this object to where you want the end goal to be. The player wins by
+    entering the green trigger box

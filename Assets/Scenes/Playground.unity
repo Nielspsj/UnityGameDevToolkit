@@ -166,6 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d276fa41e78206643b4d2c6f8048cffc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  helpInfo: Drag me into the level to be picked up by the player :D
   value: 10
   pickupSound: {fileID: 0}
 --- !u!135 &166678438
@@ -289,6 +290,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d276fa41e78206643b4d2c6f8048cffc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  helpInfo: Drag me into the level to be picked up by the player :D
   value: 10
   pickupSound: {fileID: 0}
 --- !u!135 &268671999
@@ -840,6 +842,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d276fa41e78206643b4d2c6f8048cffc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  helpInfo: Drag me into the level to be picked up by the player :D
   value: 10
   pickupSound: {fileID: 0}
 --- !u!135 &1102388333
@@ -2035,6 +2038,13 @@ PrefabInstance:
     - target: {fileID: 7258103661180016204, guid: 03c7dbc8c1fc4aa4391b698f4fba9f49, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8296471080898740823, guid: 03c7dbc8c1fc4aa4391b698f4fba9f49, type: 3}
+      propertyPath: helpInfo
+      value: 'Drag this object into the scene.
+
+        Attach the score text object
+        into the inspector below.'
       objectReference: {fileID: 0}
     - target: {fileID: 8296471080898740823, guid: 03c7dbc8c1fc4aa4391b698f4fba9f49, type: 3}
       propertyPath: scoreText

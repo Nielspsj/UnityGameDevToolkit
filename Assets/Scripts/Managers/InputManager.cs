@@ -3,6 +3,9 @@ using UnityEngine.Events;
 
 public class InputManager : MonoBehaviour
 {
+    [TextArea(1, 10)]
+    [SerializeField]
+    private string helpInfo = "Just drag me onto the player and forget about me =(";
     public static InputManager Instance { get; private set; }
 
     //[Header("Events (drag actions here in Inspector)")]

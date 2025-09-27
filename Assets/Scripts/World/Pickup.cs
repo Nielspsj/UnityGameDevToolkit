@@ -2,10 +2,14 @@ using UnityEngine;
 
 public class Pickup : MonoBehaviour
 {
-    [SerializeField, Tooltip("How many points this pickup is worth")]
+    [TextArea(1, 10)]
+    [SerializeField]
+    private string helpInfo = "Drag me into the level to be picked up by the player :D";
+
+    [SerializeField, Header("How many points this pickup is worth")]
     private int value = 10;
 
-    [SerializeField, Tooltip("Optional sound effect")]
+    [SerializeField, Header("Optional sound effect")]
     private AudioClip pickupSound;
 
     private void OnTriggerEnter(Collider other)

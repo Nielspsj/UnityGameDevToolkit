@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class TapAction : MonoBehaviour
 {
-    [SerializeField, Tooltip("Force applied upward when tapping")]
+    [SerializeField, Header("Force applied upward when tapping")]
     private float jumpForce = 5f;
 
     private Rigidbody rb;
