@@ -4,7 +4,7 @@ public class SoundManager : MonoBehaviour
 {
     public static SoundManager Instance;
 
-    [SerializeField, Header("Play music across levels")]
+    [SerializeField, Header("Drag into scene. Play music across levels")]
     public AudioSource musicSource;
     //public AudioSource sfxSource;
 

@@ -2,14 +2,9 @@ using UnityEngine;
 
 public class SwerveController : MonoBehaviour
 {
-    [TextArea(1, 10)]
-    [SerializeField]
-    private string helpInfo = "Put me on the player";
-
-
     public enum SwerveMode
     {
-        Pan,   // Smooth side-to-side movement
+        Pan,   // Snappy side-to-side movement
         Turn   // Snap 90° turns
     }
 

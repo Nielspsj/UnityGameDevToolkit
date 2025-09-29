@@ -298,80 +298,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 212786288499076303, guid: 1652abe367a159d45b177d9335fcc3e7, type: 3}
-      propertyPath: m_text
-      value: 'Play
-
-'
-      objectReference: {fileID: 0}
-    - target: {fileID: 3298679764518925052, guid: 1652abe367a159d45b177d9335fcc3e7, type: 3}
-      propertyPath: m_text
-      value: Best game ever!
-      objectReference: {fileID: 0}
-    - target: {fileID: 3298679764518925052, guid: 1652abe367a159d45b177d9335fcc3e7, type: 3}
-      propertyPath: m_fontColor.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3298679764518925052, guid: 1652abe367a159d45b177d9335fcc3e7, type: 3}
-      propertyPath: m_fontColor.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3298679764518925052, guid: 1652abe367a159d45b177d9335fcc3e7, type: 3}
-      propertyPath: m_fontColor.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3298679764518925052, guid: 1652abe367a159d45b177d9335fcc3e7, type: 3}
-      propertyPath: m_fontColor32.rgba
-      value: 4278190080
-      objectReference: {fileID: 0}
-    - target: {fileID: 3298679764518925052, guid: 1652abe367a159d45b177d9335fcc3e7, type: 3}
-      propertyPath: m_HorizontalAlignment
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3310265286521242648, guid: 1652abe367a159d45b177d9335fcc3e7, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -108.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3354447672318330595, guid: 1652abe367a159d45b177d9335fcc3e7, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3448256705391644833, guid: 1652abe367a159d45b177d9335fcc3e7, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -62.7
-      objectReference: {fileID: 0}
     - target: {fileID: 4417037166822162841, guid: 1652abe367a159d45b177d9335fcc3e7, type: 3}
       propertyPath: m_Name
       value: MainMenuScreen
       objectReference: {fileID: 0}
-    - target: {fileID: 4996774430652855010, guid: 1652abe367a159d45b177d9335fcc3e7, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 398.21
-      objectReference: {fileID: 0}
-    - target: {fileID: 5651306133584009759, guid: 1652abe367a159d45b177d9335fcc3e7, type: 3}
-      propertyPath: m_text
-      value: Quit
-      objectReference: {fileID: 0}
     - target: {fileID: 6510343763745846779, guid: 1652abe367a159d45b177d9335fcc3e7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1262738599}
-    - target: {fileID: 6510343763745846779, guid: 1652abe367a159d45b177d9335fcc3e7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadScene
-      objectReference: {fileID: 0}
     - target: {fileID: 6510343763745846779, guid: 1652abe367a159d45b177d9335fcc3e7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Playground
+      value: Playground_2
       objectReference: {fileID: 0}
     - target: {fileID: 7391468737432971371, guid: 1652abe367a159d45b177d9335fcc3e7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1262738599}
-    - target: {fileID: 7391468737432971371, guid: 1652abe367a159d45b177d9335fcc3e7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: QuitGame
-      objectReference: {fileID: 0}
     - target: {fileID: 9000860451828981447, guid: 1652abe367a159d45b177d9335fcc3e7, type: 3}
       propertyPath: m_Pivot.x
       value: 0

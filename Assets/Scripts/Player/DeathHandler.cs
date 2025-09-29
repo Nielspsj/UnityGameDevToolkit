@@ -1,11 +1,7 @@
 using UnityEngine;
 
 public class DeathHandler : MonoBehaviour
-{
-    [TextArea(1, 10)]
-    [SerializeField]
-    private string helpInfo = "Put me on the player";
-
+{   
     [SerializeField, Header("Tag for objects that cause death")]
     private string obstacleTag = "Obstacle";
 
@@ -14,7 +10,7 @@ public class DeathHandler : MonoBehaviour
     {
         if (collision.gameObject.CompareTag(obstacleTag))
         {
-            Debug.Log("hit obstacle by tag: " + collision.transform.tag);
+            //Debug.Log("hit obstacle by tag: " + collision.transform.tag);
 
             GameStateManager.Instance.LoseGame();
         }

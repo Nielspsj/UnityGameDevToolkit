@@ -1,11 +1,14 @@
 using UnityEngine;
 using UnityEngine.Events;
 
+[InfoHeaderClass("Just drag me into the scene and forget about me =(")]
 public class InputManager : MonoBehaviour
 {
+    /*
     [TextArea(1, 10)]
     [SerializeField]
-    private string helpInfo = "Just drag me onto the player and forget about me =(";
+    private string helpInfo = "Just drag me into the scene and forget about me =(";
+    */
     public static InputManager Instance { get; private set; }
 
     //[Header("Events (drag actions here in Inspector)")]
@@ -23,7 +26,7 @@ public class InputManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             lastPosition = Input.mousePosition;
             OnTap?.Invoke();

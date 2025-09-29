@@ -12,7 +12,6 @@ public class TapAction : MonoBehaviour
         if (InputManager.Instance != null)
         {
             InputManager.Instance.OnTap.AddListener(Jump);
-            //Debug.Log("adding listener");
         }
         rb = GetComponent<Rigidbody>();
     }    
@@ -31,7 +30,6 @@ public class TapAction : MonoBehaviour
         if (InputManager.Instance != null)
         {
             InputManager.Instance.OnTap.RemoveListener(Jump);
-            //Debug.Log("Removing listener");
         }
     }
 

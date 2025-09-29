@@ -1,11 +1,14 @@
 using UnityEngine;
 using TMPro;
 
+[InfoHeaderClass("Drag this object into the scene. Attach the score text object into the inspector below")]
 public class ScoreManager : MonoBehaviour
 {
+    /*
     [TextArea(1, 10)]
     [SerializeField]
     private string helpInfo = "Drag this object into the scene. \n" + "Attach the score text object into the inspector below.";
+    */
     public static ScoreManager Instance { get; private set; }
 
     [SerializeField, Header("Text UI for score + highscore display")]
