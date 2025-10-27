@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SimpleCheckpoint : MonoBehaviour
+public class Checkpoint : MonoBehaviour
 {
     void OnTriggerEnter(Collider other)
     {

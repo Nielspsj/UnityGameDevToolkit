@@ -18,4 +18,9 @@ public class PlayerRespawn : MonoBehaviour
             transform.position = lastCheckpointPosition;
         }
     }
+
+    public void RespawnAtCheckpoint()
+    {
+        transform.position = lastCheckpointPosition;
+    }
 }
