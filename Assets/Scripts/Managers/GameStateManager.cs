@@ -12,6 +12,7 @@ public class GameStateManager : MonoBehaviour
     [Header("Events (Add in the Inspector UI screens, ForwardRunner etc.)")]
     public UnityEvent OnGameWin;
     public UnityEvent OnGameLose;
+    public UnityEvent OnGameRespawnAtCheckpoint;
     public UnityEvent OnGameRestart;
     public UnityEvent OnGameNextLevel;
 
@@ -32,9 +33,19 @@ public class GameStateManager : MonoBehaviour
 
     public void LoseGame()
     {
+        Debug.Log("losegame");
         if (state != GameState.Playing) return;
+
+        Debug.Log("lost");
+
         state = GameState.Lost;
         OnGameLose?.Invoke();
+    }
+
+    public void RespawnAtCheckpoint()
+    {
+        state = GameState.Playing;
+        OnGameRespawnAtCheckpoint?.Invoke();
     }
 
     public void RestartGame()

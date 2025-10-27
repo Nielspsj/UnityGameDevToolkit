@@ -1784,6 +1784,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Timer
       objectReference: {fileID: 0}
+    - target: {fileID: 4094278873802039650, guid: d46c4ccc08ddcc44a8b33e3e8d0961e6, type: 3}
+      propertyPath: duration
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9142993742713610821, guid: d46c4ccc08ddcc44a8b33e3e8d0961e6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2608,8 +2612,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8541063378487106319, guid: faa20157cda06ef4a8e44a4e3c59b2ba, type: 3}
+      propertyPath: OnGameWin.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8541063378487106319, guid: faa20157cda06ef4a8e44a4e3c59b2ba, type: 3}
+      propertyPath: OnGameLose.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8541063378487106319, guid: faa20157cda06ef4a8e44a4e3c59b2ba, type: 3}
       propertyPath: OnGameRestart.m_PersistentCalls.m_Calls.Array.size
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8541063378487106319, guid: faa20157cda06ef4a8e44a4e3c59b2ba, type: 3}
+      propertyPath: OnGameWin.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8541063378487106319, guid: faa20157cda06ef4a8e44a4e3c59b2ba, type: 3}
+      propertyPath: OnGameLose.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8541063378487106319, guid: faa20157cda06ef4a8e44a4e3c59b2ba, type: 3}
       propertyPath: OnGameWin.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -2620,6 +2640,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 773514423}
     - target: {fileID: 8541063378487106319, guid: faa20157cda06ef4a8e44a4e3c59b2ba, type: 3}
+      propertyPath: OnGameWin.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1993519048}
+    - target: {fileID: 8541063378487106319, guid: faa20157cda06ef4a8e44a4e3c59b2ba, type: 3}
       propertyPath: OnGameLose.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1993519039}
@@ -2628,7 +2652,39 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 700057190}
     - target: {fileID: 8541063378487106319, guid: faa20157cda06ef4a8e44a4e3c59b2ba, type: 3}
+      propertyPath: OnGameLose.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1993519048}
+    - target: {fileID: 8541063378487106319, guid: faa20157cda06ef4a8e44a4e3c59b2ba, type: 3}
       propertyPath: OnGameRestart.m_PersistentCalls.m_Calls.Array.data[4].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8541063378487106319, guid: faa20157cda06ef4a8e44a4e3c59b2ba, type: 3}
+      propertyPath: OnGameWin.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8541063378487106319, guid: faa20157cda06ef4a8e44a4e3c59b2ba, type: 3}
+      propertyPath: OnGameWin.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8541063378487106319, guid: faa20157cda06ef4a8e44a4e3c59b2ba, type: 3}
+      propertyPath: OnGameWin.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8541063378487106319, guid: faa20157cda06ef4a8e44a4e3c59b2ba, type: 3}
+      propertyPath: OnGameLose.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8541063378487106319, guid: faa20157cda06ef4a8e44a4e3c59b2ba, type: 3}
+      propertyPath: OnGameLose.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8541063378487106319, guid: faa20157cda06ef4a8e44a4e3c59b2ba, type: 3}
+      propertyPath: OnGameLose.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8541063378487106319, guid: faa20157cda06ef4a8e44a4e3c59b2ba, type: 3}
+      propertyPath: OnGameRespawnAtCheckpoint.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8541063378487106319, guid: faa20157cda06ef4a8e44a4e3c59b2ba, type: 3}
@@ -2651,6 +2707,14 @@ PrefabInstance:
       propertyPath: OnGameRestart.m_PersistentCalls.m_Calls.Array.data[4].m_Target
       value: 
       objectReference: {fileID: 1993519048}
+    - target: {fileID: 8541063378487106319, guid: faa20157cda06ef4a8e44a4e3c59b2ba, type: 3}
+      propertyPath: OnGameWin.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: RespawnAtCheckpoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 8541063378487106319, guid: faa20157cda06ef4a8e44a4e3c59b2ba, type: 3}
+      propertyPath: OnGameLose.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: RespawnAtCheckpoint
+      objectReference: {fileID: 0}
     - target: {fileID: 8541063378487106319, guid: faa20157cda06ef4a8e44a4e3c59b2ba, type: 3}
       propertyPath: OnGameNextLevel.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2680,11 +2744,51 @@ PrefabInstance:
       value: RespawnAtCheckpoint
       objectReference: {fileID: 0}
     - target: {fileID: 8541063378487106319, guid: faa20157cda06ef4a8e44a4e3c59b2ba, type: 3}
+      propertyPath: OnGameRespawnAtCheckpoint.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8541063378487106319, guid: faa20157cda06ef4a8e44a4e3c59b2ba, type: 3}
+      propertyPath: OnGameRespawnAtCheckpoint.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1993519048}
+    - target: {fileID: 8541063378487106319, guid: faa20157cda06ef4a8e44a4e3c59b2ba, type: 3}
+      propertyPath: OnGameWin.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: PlayerRespawn, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8541063378487106319, guid: faa20157cda06ef4a8e44a4e3c59b2ba, type: 3}
+      propertyPath: OnGameLose.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: PlayerRespawn, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8541063378487106319, guid: faa20157cda06ef4a8e44a4e3c59b2ba, type: 3}
+      propertyPath: OnGameRespawnAtCheckpoint.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8541063378487106319, guid: faa20157cda06ef4a8e44a4e3c59b2ba, type: 3}
+      propertyPath: OnGameRespawnAtCheckpoint.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RespawnAtCheckpoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 8541063378487106319, guid: faa20157cda06ef4a8e44a4e3c59b2ba, type: 3}
       propertyPath: OnGameRestart.m_PersistentCalls.m_Calls.Array.data[4].m_TargetAssemblyTypeName
       value: PlayerRespawn, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8541063378487106319, guid: faa20157cda06ef4a8e44a4e3c59b2ba, type: 3}
+      propertyPath: OnGameRespawnAtCheckpoint.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerRespawn, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8541063378487106319, guid: faa20157cda06ef4a8e44a4e3c59b2ba, type: 3}
+      propertyPath: OnGameWin.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8541063378487106319, guid: faa20157cda06ef4a8e44a4e3c59b2ba, type: 3}
+      propertyPath: OnGameLose.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8541063378487106319, guid: faa20157cda06ef4a8e44a4e3c59b2ba, type: 3}
       propertyPath: OnGameRestart.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8541063378487106319, guid: faa20157cda06ef4a8e44a4e3c59b2ba, type: 3}
+      propertyPath: OnGameRespawnAtCheckpoint.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []

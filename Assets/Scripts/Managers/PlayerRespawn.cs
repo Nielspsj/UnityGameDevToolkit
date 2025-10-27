@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[InfoHeaderClass("Put me on the player. I store last checkpoint for respawning from GameStateManager and can also respawn instantly with R")]
 public class PlayerRespawn : MonoBehaviour
 {
     public static Vector3 lastCheckpointPosition;
@@ -21,6 +22,7 @@ public class PlayerRespawn : MonoBehaviour
 
     public void RespawnAtCheckpoint()
     {
+        Debug.Log("Respawn at checkpoint");
         transform.position = lastCheckpointPosition;
     }
 }

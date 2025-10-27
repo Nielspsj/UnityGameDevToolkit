@@ -4,15 +4,21 @@ public class DeathHandler : MonoBehaviour
 {   
     [SerializeField, Header("Tag for objects that cause death")]
     private string obstacleTag = "Obstacle";
-
+    public bool useRespawnCheckpoints = true;
     //If it hits a collider with the obstacleTag then it will trigger the LoseGame event.
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag(obstacleTag))
         {
             //Debug.Log("hit obstacle by tag: " + collision.transform.tag);
-
-            GameStateManager.Instance.LoseGame();
+            if (useRespawnCheckpoints == true)
+            {
+                GameStateManager.Instance.RespawnAtCheckpoint();
+            }
+            else
+            {
+                GameStateManager.Instance.LoseGame();
+            }
         }
     }
 
@@ -21,7 +27,14 @@ public class DeathHandler : MonoBehaviour
     {
         if (other.CompareTag(obstacleTag))
         {
-            GameStateManager.Instance.LoseGame();
+            if (useRespawnCheckpoints == true)
+            {
+                GameStateManager.Instance.RespawnAtCheckpoint();
+            }
+            else
+            {
+                GameStateManager.Instance.LoseGame();
+            }
         }
     }
 }
