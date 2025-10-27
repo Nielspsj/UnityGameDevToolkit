@@ -25,14 +25,12 @@ public class TimerManager : MonoBehaviour
 
     void Update()
     {
-        Debug.Log("isRunning: " + isRunning);
         if (!isRunning) return;
 
         currentTime += (useCountDown ? -1 : 1) * Time.deltaTime;
-        Debug.Log("currentTime: " +  currentTime);
         OnTimerTick?.Invoke(currentTime);
 
-        /*
+        
         if (useCountDown == true && currentTime <= 0)
         {
             StopTimer();
@@ -44,17 +42,16 @@ public class TimerManager : MonoBehaviour
             StopTimer();
             OnTimerEnd?.Invoke();
         }
-        */
+        
     }
 
     public void StartTimer(float startValue = 0f)
     {
         currentTime = useCountDown && duration > 0 ? duration : startValue;
         isRunning = true;
-        Debug.Log("timer started");
         OnTimerStart?.Invoke();
     }
-    /*
+    
     public void StopTimer()
     {
         isRunning = false;
@@ -64,7 +61,7 @@ public class TimerManager : MonoBehaviour
     {
         currentTime = useCountDown && duration > 0 ? duration : 0f;
     }
-    */
+    
     public float GetCurrentTime()
     {
         return currentTime;
