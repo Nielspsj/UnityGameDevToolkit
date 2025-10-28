@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Playground.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/Scenes/Playground_2.unity
+    path: Assets/Scenes/Playground.unity
     guid: df241ea93269b5741ae032cbe870942b
   - enabled: 1
     path: Assets/Scenes/Level_1.unity
