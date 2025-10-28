@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[InfoHeaderClass("Drag the object into the scene.")]
 public class PauseMenuManager : MonoBehaviour
 {
     private bool isPaused = false;
