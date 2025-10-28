@@ -3,32 +3,39 @@ using UnityEngine.Events;
 
 [InfoHeaderClass("Just drag me into the scene and forget about me =(")]
 public class InputManager : MonoBehaviour
-{
-    /*
-    [TextArea(1, 10)]
-    [SerializeField]
-    private string helpInfo = "Just drag me into the scene and forget about me =(";
-    */
+{   
     public static InputManager Instance { get; private set; }
 
     //[Header("Events (drag actions here in Inspector)")]
-    [HideInInspector] public UnityEvent OnTap;
+    [HideInInspector] public UnityEvent OnTap, OnPause;
     //private UnityEvent OnHold;
     [HideInInspector] public UnityEvent<float> OnSwipe; // passes swipe delta (-1 to 1)
 
-    private Vector2 lastPosition;
+    //private Vector2 lastPosition;
 
     private void Awake()
     {
-        if (Instance == null) Instance = this;
-        else Destroy(gameObject);
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
     }
 
     private void Update()
     {
+        // Example: press Escape or tap with two fingers
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Debug.Log("escape");
+            OnPause.Invoke();
+        }
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            lastPosition = Input.mousePosition;
+            //lastPosition = Input.mousePosition;
             OnTap?.Invoke();
         }
 

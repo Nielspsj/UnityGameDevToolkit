@@ -1,7 +1,7 @@
 using UnityEngine;
 using static SwerveController;
 
-public class TapAction : MonoBehaviour
+public class SimpleTapAction : MonoBehaviour
 {
     public enum JumpMode
     {
@@ -23,32 +23,19 @@ public class TapAction : MonoBehaviour
 
 
     private void Awake()
-    {
-        if (InputManager.Instance != null)
-        {
-            InputManager.Instance.OnTap.AddListener(HandleTap);
-        }
+    {        
         rb = GetComponent<Rigidbody>();
     }    
-    /*
-    private void OnEnable()
+    
+    private void Update()
     {
-        if (InputManager.Instance != null)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            InputManager.Instance.OnTap.AddListener(Jump);
-            //Debug.Log("adding listener");
-        }
-    }
-    */
-    private void OnDisable()
-    {
-        if (InputManager.Instance != null)
-        {
-            InputManager.Instance.OnTap.RemoveListener(HandleTap);
+            HandleTap();
         }
     }
 
-    public void HandleTap()
+    private void HandleTap()
     {
         if (jumpMode == JumpMode.Endless)
         {
