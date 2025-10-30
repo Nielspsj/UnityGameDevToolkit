@@ -124,6 +124,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 10
   pickupSound: {fileID: 0}
+  OnPickup:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &3352057191612045465
 PrefabInstance:
   m_ObjectHideFlags: 0

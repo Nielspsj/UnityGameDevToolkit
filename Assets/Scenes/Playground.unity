@@ -151,6 +151,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: e3c71c50de390ec4190b877211ba0717, type: 3}
+--- !u!1 &67344389 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 937334577372202100, guid: ed08812079d9ce341a8526c117b67344, type: 3}
+  m_PrefabInstance: {fileID: 4636554553569145619}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &71261941 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 4f32dfddb033d3e40b5841bc53cc1689, type: 3}
@@ -220,12 +225,46 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5248663817965307685, guid: ed08812079d9ce341a8526c117b67344, type: 3}
   m_PrefabInstance: {fileID: 4636554553569145619}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_GameObject: {fileID: 67344389}
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f46a1b6b6fe6f9e4fa302713c9d4c14e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &85841466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 67344389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c4792ee465e8ec408585b8090bc3a11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1993519049}
+  tileParent: {fileID: 1606400055}
+  startTile: {fileID: 7099815736229599963, guid: 5f508c8338425cd43a2d5c1fe1dc4670, type: 3}
+  weightedTiles:
+  - prefab: {fileID: 7099815736229599963, guid: 5f508c8338425cd43a2d5c1fe1dc4670, type: 3}
+    weight: 61
+    direction: 0
+  - prefab: {fileID: 5547185824755539651, guid: 2692fbd5101acea439acb2b889aa16ab, type: 3}
+    weight: 48
+    direction: 0
+  - prefab: {fileID: 5686450870328644344, guid: 30ad3385bae916e4eb6897dca77480ab, type: 3}
+    weight: 23
+    direction: 1
+  - prefab: {fileID: 7226206181359446935, guid: 466e62598597de248bba810e33467a10, type: 3}
+    weight: 23
+    direction: 2
+  endTile: {fileID: 0}
+  endlessMode: 1
+  levelTileCount: 20
+  maxActiveTiles: 50
+  tileLength: 10
+  spawnDistance: 20
 --- !u!1 &183074812 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 4f32dfddb033d3e40b5841bc53cc1689, type: 3}
@@ -452,7 +491,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1001 &335413736
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2887,7 +2926,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1508612129
 GameObject:
   m_ObjectHideFlags: 0
@@ -2992,7 +3031,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.58, y: 1, z: 33.05}
+  m_LocalScale: {x: 33, y: 1, z: 33.05}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 869331695}
@@ -3753,7 +3792,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 7552685783659635038}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: af02fe3df3ea56441843e8d1e09fdd9d, type: 3}
   m_Name: 
@@ -3778,7 +3817,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2016886624
 Transform:
   m_ObjectHideFlags: 0
@@ -4405,7 +4444,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 937334577372202100, guid: ed08812079d9ce341a8526c117b67344, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5248663817965307685, guid: ed08812079d9ce341a8526c117b67344, type: 3}
       propertyPath: player
@@ -4416,9 +4455,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7099815736229599963, guid: c7f263c4aada00640bee31dd467c0889, type: 3}
     - target: {fileID: 5248663817965307685, guid: ed08812079d9ce341a8526c117b67344, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5248663817965307685, guid: ed08812079d9ce341a8526c117b67344, type: 3}
       propertyPath: tileParent
       value: 
       objectReference: {fileID: 1606400055}
+    - target: {fileID: 5248663817965307685, guid: ed08812079d9ce341a8526c117b67344, type: 3}
+      propertyPath: useTurning
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5248663817965307685, guid: ed08812079d9ce341a8526c117b67344, type: 3}
       propertyPath: endlessMode
       value: 0
@@ -4435,6 +4482,26 @@ PrefabInstance:
       propertyPath: maxActiveTiles
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 5248663817965307685, guid: ed08812079d9ce341a8526c117b67344, type: 3}
+      propertyPath: useWeightedTiles
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5248663817965307685, guid: ed08812079d9ce341a8526c117b67344, type: 3}
+      propertyPath: tilePrefabs.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5248663817965307685, guid: ed08812079d9ce341a8526c117b67344, type: 3}
+      propertyPath: 'tilePrefabs.Array.data[0]'
+      value: 
+      objectReference: {fileID: 7099815736229599963, guid: 5f508c8338425cd43a2d5c1fe1dc4670, type: 3}
+    - target: {fileID: 5248663817965307685, guid: ed08812079d9ce341a8526c117b67344, type: 3}
+      propertyPath: 'tilePrefabs.Array.data[1]'
+      value: 
+      objectReference: {fileID: 6676628703659542078, guid: c1c5b49d2baff66458e1b5651748c1fb, type: 3}
+    - target: {fileID: 5248663817965307685, guid: ed08812079d9ce341a8526c117b67344, type: 3}
+      propertyPath: 'tilePrefabs.Array.data[2]'
+      value: 
+      objectReference: {fileID: 5547185824755539651, guid: 2692fbd5101acea439acb2b889aa16ab, type: 3}
     - target: {fileID: 5248663817965307685, guid: ed08812079d9ce341a8526c117b67344, type: 3}
       propertyPath: weightedTiles.Array.data[0].weight
       value: 41
@@ -4490,7 +4557,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 937334577372202100, guid: ed08812079d9ce341a8526c117b67344, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 85841466}
   m_SourcePrefab: {fileID: 100100000, guid: ed08812079d9ce341a8526c117b67344, type: 3}
 --- !u!4 &5009837001793410648 stripped
 Transform:
@@ -5182,11 +5252,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 320137831342704184, guid: d4a064d5edc11d74c9d10b9063ccc5ca, type: 3}
       propertyPath: forwardSpeed
-      value: 20
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 440359445249682475, guid: d4a064d5edc11d74c9d10b9063ccc5ca, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2055574604744517628, guid: d4a064d5edc11d74c9d10b9063ccc5ca, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2087990428367054039, guid: d4a064d5edc11d74c9d10b9063ccc5ca, type: 3}
+      propertyPath: swerveMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2422273371037210544, guid: d4a064d5edc11d74c9d10b9063ccc5ca, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5226,6 +5304,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2422273371037210544, guid: d4a064d5edc11d74c9d10b9063ccc5ca, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6151720322223944646, guid: d4a064d5edc11d74c9d10b9063ccc5ca, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

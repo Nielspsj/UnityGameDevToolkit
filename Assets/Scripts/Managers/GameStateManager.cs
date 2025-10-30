@@ -33,11 +33,7 @@ public class GameStateManager : MonoBehaviour
 
     public void LoseGame()
     {
-        Debug.Log("losegame");
         if (state != GameState.Playing) return;
-
-        Debug.Log("lost");
-
         state = GameState.Lost;
         OnGameLose?.Invoke();
     }
