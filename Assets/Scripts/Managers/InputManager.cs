@@ -29,7 +29,6 @@ public class InputManager : MonoBehaviour
         // Example: press Escape or tap with two fingers
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Debug.Log("escape");
             OnPause.Invoke();
         }
 

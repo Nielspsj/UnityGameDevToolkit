@@ -23,23 +23,18 @@ public class TapAction : MonoBehaviour
 
 
     private void Awake()
+    {        
+        rb = GetComponent<Rigidbody>();
+    }    
+
+    private void Start()
     {
         if (InputManager.Instance != null)
         {
             InputManager.Instance.OnTap.AddListener(HandleTap);
         }
-        rb = GetComponent<Rigidbody>();
-    }    
-    /*
-    private void OnEnable()
-    {
-        if (InputManager.Instance != null)
-        {
-            InputManager.Instance.OnTap.AddListener(Jump);
-            //Debug.Log("adding listener");
-        }
     }
-    */
+
     private void OnDisable()
     {
         if (InputManager.Instance != null)

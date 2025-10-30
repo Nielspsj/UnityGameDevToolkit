@@ -21,16 +21,7 @@ public class SwerveController : MonoBehaviour
     [SerializeField, Header("How fast the player rotates")]
     private float turnSpeed = 10f; // Rotation speed when turning
     private Quaternion targetRotation;
-
-
-
-    private void Awake()
-    {
-        if (InputManager.Instance != null)
-        {
-            InputManager.Instance.OnSwipe.AddListener(HandleSwipe);
-        }
-    }
+      
 
     private void OnDisable()
     {
@@ -42,6 +33,10 @@ public class SwerveController : MonoBehaviour
 
     private void Start()
     {
+        if (InputManager.Instance != null)
+        {
+            InputManager.Instance.OnSwipe.AddListener(HandleSwipe);
+        }
         targetRotation = transform.rotation;
     }
 

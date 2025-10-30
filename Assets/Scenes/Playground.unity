@@ -226,7 +226,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 4636554553569145619}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 67344389}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f46a1b6b6fe6f9e4fa302713c9d4c14e, type: 3}
   m_Name: 
@@ -238,7 +238,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 67344389}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3c4792ee465e8ec408585b8090bc3a11, type: 3}
   m_Name: 
@@ -4456,7 +4456,7 @@ PrefabInstance:
       objectReference: {fileID: 7099815736229599963, guid: c7f263c4aada00640bee31dd467c0889, type: 3}
     - target: {fileID: 5248663817965307685, guid: ed08812079d9ce341a8526c117b67344, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5248663817965307685, guid: ed08812079d9ce341a8526c117b67344, type: 3}
       propertyPath: tileParent
@@ -4468,11 +4468,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5248663817965307685, guid: ed08812079d9ce341a8526c117b67344, type: 3}
       propertyPath: endlessMode
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5248663817965307685, guid: ed08812079d9ce341a8526c117b67344, type: 3}
       propertyPath: spawnDistance
-      value: 20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5248663817965307685, guid: ed08812079d9ce341a8526c117b67344, type: 3}
       propertyPath: levelTileCount
@@ -4504,15 +4504,15 @@ PrefabInstance:
       objectReference: {fileID: 5547185824755539651, guid: 2692fbd5101acea439acb2b889aa16ab, type: 3}
     - target: {fileID: 5248663817965307685, guid: ed08812079d9ce341a8526c117b67344, type: 3}
       propertyPath: weightedTiles.Array.data[0].weight
-      value: 41
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 5248663817965307685, guid: ed08812079d9ce341a8526c117b67344, type: 3}
       propertyPath: weightedTiles.Array.data[1].weight
-      value: 22
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 5248663817965307685, guid: ed08812079d9ce341a8526c117b67344, type: 3}
       propertyPath: weightedTiles.Array.data[2].weight
-      value: 39
+      value: 61
       objectReference: {fileID: 0}
     - target: {fileID: 8494560165267240242, guid: ed08812079d9ce341a8526c117b67344, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5264,7 +5264,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2087990428367054039, guid: d4a064d5edc11d74c9d10b9063ccc5ca, type: 3}
       propertyPath: swerveMode
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2422273371037210544, guid: d4a064d5edc11d74c9d10b9063ccc5ca, type: 3}
       propertyPath: m_LocalPosition.x

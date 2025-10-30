@@ -5,19 +5,12 @@ using UnityEngine.SceneManagement;
 [InfoHeaderClass("Drag me into the scene. I can load new scenes")]
 public class SceneTransitionManager : MonoBehaviour
 {
-    public static SceneTransitionManager Instance;
-    /*
-    [TextArea(1, 10)]
-    [SerializeField]
-    private string helpInfo = "Drag me into the scene. I can load new scenes";
-    */
+    public static SceneTransitionManager Instance;   
 
     private void Awake()
     {
         if (Instance == null) Instance = this;
-        else Destroy(gameObject);
-         
-        //DontDestroyOnLoad(gameObject); // persists between scenes
+        else Destroy(gameObject);         
     }
 
     public void LoadNextScene(string sceneName)
