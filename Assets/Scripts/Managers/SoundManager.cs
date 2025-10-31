@@ -1,12 +1,13 @@
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class SoundManager : MonoBehaviour
 {
     public static SoundManager Instance;
 
-    [SerializeField, Header("Drag into scene. Play music across levels")]
+    [SerializeField, Header("Drag into scene. Play music across levels or sound effects once.")]
     public AudioSource musicSource;
-    //public AudioSource sfxSource;
+    public AudioSource soundEffectSource;
 
     private void Awake()
     {
@@ -31,9 +32,8 @@ public class SoundManager : MonoBehaviour
         musicSource.Stop();
     }
 
-
-    //public void PlaySFX(AudioClip clip)
-    //{
-    //    sfxSource.PlayOneShot(clip);
-    //}
+    public void PlaySFX(AudioClip clip)
+    {
+        soundEffectSource.PlayOneShot(clip);
+    }
 }

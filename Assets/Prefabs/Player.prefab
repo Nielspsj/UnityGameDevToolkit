@@ -168,7 +168,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2055574604744517628}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cc3d2b0c9df098040b4b5d6fa19ef350, type: 3}
   m_Name: 
@@ -193,6 +193,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obstacleTag: Obstacle
   useRespawnCheckpoints: 1
+  OnHittingObstacle:
+    m_PersistentCalls:
+      m_Calls: []
+  eventDelay: 0.5
 --- !u!114 &320137831342704184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -205,7 +209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fe9ace6a8146b2448c41f213f711549, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forwardSpeed: 5
+  forwardSpeed: 10
   isRunning: 1
 --- !u!114 &6151720322223944646
 MonoBehaviour:
@@ -214,7 +218,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2055574604744517628}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: af02fe3df3ea56441843e8d1e09fdd9d, type: 3}
   m_Name: 

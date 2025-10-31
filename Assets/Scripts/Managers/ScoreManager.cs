@@ -1,10 +1,13 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.Events;
 
 [InfoHeaderClass("Drag this object into the scene. Attach the score text object into the inspector below")]
 public class ScoreManager : MonoBehaviour
 {   
     public static ScoreManager Instance { get; private set; }
+
+    public UnityEvent OnAddScore;
 
     [SerializeField, Header("Text UI for score + highscore display")]
     private TextMeshProUGUI scoreText;
@@ -14,8 +17,14 @@ public class ScoreManager : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance == null) Instance = this;
-        else Destroy(gameObject);
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
 
         highscore = PlayerPrefs.GetInt("HighScore", 0);
         UpdateUI();
@@ -23,6 +32,7 @@ public class ScoreManager : MonoBehaviour
 
     public void AddScore(int value)
     {
+        OnAddScore?.Invoke();
         score += value;
         if (score > highscore)
         {
