@@ -3,12 +3,7 @@ using UnityEngine.Events;
 
 [InfoHeaderClass("Drag me into the level to be picked up by the player :D")]
 public class Pickup : MonoBehaviour
-{
-    /*
-    [TextArea(1, 10)]
-    [SerializeField]
-    private string helpInfo = "Drag me into the level to be picked up by the player :D";
-    */
+{   
     [SerializeField, Header("How many points this pickup is worth")]
     private int value = 10;
 

@@ -34,20 +34,8 @@ public class InputManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            //lastPosition = Input.mousePosition;
             OnTap?.Invoke();
-        }
-
-        /*
-        if (Input.GetMouseButton(0))
-        {
-            //OnHold?.Invoke();
-            Vector2 delta = (Vector2)Input.mousePosition - lastPosition;
-            float normalizedDelta = Mathf.Clamp(delta.x / Screen.width, -1f, 1f);
-            OnSwipe?.Invoke(normalizedDelta);
-            lastPosition = Input.mousePosition;
-        }
-        */
+        }     
 
         if (Input.GetKeyDown(KeyCode.A))
         {
