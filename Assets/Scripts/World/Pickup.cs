@@ -16,7 +16,10 @@ public class Pickup : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            ScoreManager.Instance.AddScore(value);
+            if(ScoreManager.Instance != null)
+            {
+                ScoreManager.Instance.AddScore(value);
+            }
 
             OnPickup?.Invoke();
 

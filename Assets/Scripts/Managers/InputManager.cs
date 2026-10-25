@@ -26,7 +26,7 @@ public class InputManager : MonoBehaviour
 
     private void Update()
     {
-        // Example: press Escape or tap with two fingers
+        // Example: press Escape 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             OnPause.Invoke();
@@ -35,16 +35,30 @@ public class InputManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             OnTap?.Invoke();
-        }     
-
+        }
+#if ENABLE_INPUT_SYSTEM
+        var left = UnityEngine.InputSystem.Keyboard.current;
+        if (left.aKey.wasPressedThisFrame || left.leftArrowKey.wasPressedThisFrame)
+        {
+            OnSwipe?.Invoke(-1f);
+        }
+#else
         if (Input.GetKeyDown(KeyCode.A))
         {
             OnSwipe?.Invoke(-1f);
         }
-
+#endif
+#if ENABLE_INPUT_SYSTEM
+        var right = UnityEngine.InputSystem.Keyboard.current;
+        if (right.dKey.wasPressedThisFrame || right.rightArrowKey.wasPressedThisFrame)
+        {
+            OnSwipe?.Invoke(1f);
+        }
+#else
         if (Input.GetKeyDown(KeyCode.D))
         {
             OnSwipe?.Invoke(1f);
         }
+#endif
     }
 }

@@ -753,6 +753,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1199635647}
   - component: {fileID: 1199635648}
+  - component: {fileID: 1199635649}
   m_Layer: 0
   m_Name: LevelGenerator
   m_TagString: Untagged
@@ -782,14 +783,19 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1199635645}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2f5344f999e9f9a448c3d9ecc8979da8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EndlessRunnerGenerator
   player: {fileID: 469515531}
   addAutoRunToPlayer: 0
-  chunkPrefabs: []
+  chunkPrefabs:
+  - {fileID: 2986240192609216687, guid: 56e2aafe9baeee84faab5533509e16a9, type: 3}
+  - {fileID: 284071245710177728, guid: 731188592dbcc604a97e8046ab128212, type: 3}
+  - {fileID: 398649059712048577, guid: bd1ce57d748de9948b136d6638433ebe, type: 3}
+  - {fileID: 4056731971868944049, guid: f0f0588bde15a474d836aadb57e507b6, type: 3}
+  - {fileID: 4975194254003565856, guid: d2efed273d930a64e857263539e7571c, type: 3}
   chunkLength: 20
   chunksAlive: 5
   lanes: 3
@@ -800,6 +806,43 @@ MonoBehaviour:
   densityIncreasePerChunk: 0.01
   spawnCoins: 0
   useSeed: 1
+  seed: 999999
+--- !u!114 &1199635649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1199635645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a8319294b89edd43abafa5b63c0d68e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EndlessRunnerGenerator1
+  player: {fileID: 469515531}
+  addAutoRunToPlayer: 0
+  easyChunks:
+  - {fileID: 2986240192609216687, guid: 56e2aafe9baeee84faab5533509e16a9, type: 3}
+  - {fileID: 4056731971868944049, guid: f0f0588bde15a474d836aadb57e507b6, type: 3}
+  mediumChunks:
+  - {fileID: 4975194254003565856, guid: d2efed273d930a64e857263539e7571c, type: 3}
+  hardChunks:
+  - {fileID: 284071245710177728, guid: 731188592dbcc604a97e8046ab128212, type: 3}
+  safeChunk: {fileID: 398649059712048577, guid: bd1ce57d748de9948b136d6638433ebe, type: 3}
+  mediumUnlockChunk: 10
+  hardUnlockChunk: 30
+  harderTierBias: 0.1
+  chunkLength: 20
+  chunksAlive: 5
+  lanes: 3
+  laneWidth: 2.5
+  obstacleRows: 4
+  emptyStartChunks: 2
+  startDensity: 0.15
+  maxDensity: 0.6
+  densityIncreasePerChunk: 0.01
+  spawnCoins: 0
+  useSeed: 0
   seed: 12345
 --- !u!1 &1286056865
 GameObject:
