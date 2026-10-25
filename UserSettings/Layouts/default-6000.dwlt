@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 989
   m_ShowMode: 4
-  m_Title: Inspector
+  m_Title: Hierarchy
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 112}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 24
+  controlID: 116
   draggingID: 0
 --- !u!114 &5
 MonoBehaviour:
@@ -220,8 +220,8 @@ MonoBehaviour:
     y: 0
     width: 429
     height: 933
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 76}
+  m_MaxSize: {x: 4001, y: 4026}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -587,13 +587,12 @@ MonoBehaviour:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs:
-      - m_Data: -13432
+      - m_Data: -1632
       m_LastClickedID:
-        m_Data: -13432
+        m_Data: -1632
       m_ExpandedIDs:
-      - m_Data: -13430
-      - m_Data: -13166
-      - m_Data: -13150
+      - m_Data: -1622
+      - m_Data: -1344
       - m_Data: -1336
       m_RenameOverlay:
         m_UserAcceptedRename: 0
@@ -743,7 +742,11 @@ MonoBehaviour:
       m_Data: 0
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 48442
+    - m_Data: 48546
+    - m_Data: 48942
+    - m_Data: 48944
+    - m_Data: 48946
+    - m_Data: 48948
     - m_Data: 48950
     - m_Data: 48952
     - m_Data: 48954
@@ -776,10 +779,6 @@ MonoBehaviour:
     - m_Data: 49008
     - m_Data: 49010
     - m_Data: 49012
-    - m_Data: 49014
-    - m_Data: 49016
-    - m_Data: 49018
-    - m_Data: 49020
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -806,14 +805,18 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 420}
+    scrollPos: {x: 0, y: 1027}
     m_SelectedIDs:
-    - m_Data: -13432
+    - m_Data: -1632
     m_LastClickedID:
       m_Data: 0
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 48442
+    - m_Data: 48546
+    - m_Data: 48942
+    - m_Data: 48944
+    - m_Data: 48946
+    - m_Data: 48948
     - m_Data: 48950
     - m_Data: 48952
     - m_Data: 48954
@@ -839,17 +842,13 @@ MonoBehaviour:
     - m_Data: 48994
     - m_Data: 48996
     - m_Data: 48998
+    - m_Data: 49000
     - m_Data: 49002
     - m_Data: 49004
     - m_Data: 49006
     - m_Data: 49008
     - m_Data: 49010
     - m_Data: 49012
-    - m_Data: 49014
-    - m_Data: 49016
-    - m_Data: 49018
-    - m_Data: 49020
-    - m_Data: 49260
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -877,8 +876,8 @@ MonoBehaviour:
       m_ResourceFile: 
   m_ListAreaState:
     m_SelectedInstanceIDs:
-    - m_Data: -13432
-    m_LastClickedInstanceID: -13432
+    - m_Data: -1632
+    m_LastClickedInstanceID: -1632
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: []
     m_RenameOverlay:
@@ -1287,7 +1286,7 @@ MonoBehaviour:
       sizeOverridden: 0
     - dockPosition: 1
       containerId: overlay-container--right
-      displayed: 1
+      displayed: 0
       id: Scene View/Particles
       index: 6
       contents: '{"m_Layout":4,"m_Collapsed":false,"m_Folded":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":0.0,"y":25.0},"m_SnapOffsetDelta":{"x":0.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
@@ -1854,7 +1853,7 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: 0.55155957, y: -0.018764365, z: 0.012411807, w: 0.8338351}
     speed: 2
-    m_Value: {x: 0.5515582, y: -0.018764319, z: 0.012411776, w: 0.83383304}
+    m_Value: {x: -0.55155957, y: 0.018764365, z: -0.012411806, w: -0.8338351}
   m_Size:
     m_Target: 4.3976555
     speed: 2
