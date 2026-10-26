@@ -48,7 +48,7 @@ public class GameStateManager : MonoBehaviour
     {
         state = GameState.Playing;
         OnGameRestart?.Invoke();
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void NextLevel()
