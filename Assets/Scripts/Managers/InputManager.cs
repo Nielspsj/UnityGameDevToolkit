@@ -74,6 +74,7 @@ public class InputManager : MonoBehaviour
 
         if (k != null && (k.spaceKey.wasPressedThisFrame || k.wKey.wasPressedThisFrame || k.upArrowKey.wasPressedThisFrame))
         {
+            Debug.Log("jumpPressed");
             OnTap?.Invoke();
         }
 #else

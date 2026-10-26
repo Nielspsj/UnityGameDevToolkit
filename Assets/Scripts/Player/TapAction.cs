@@ -65,8 +65,14 @@ public class TapAction : MonoBehaviour
         // --- Ground Check ---
         // Shoot a ray downward from the player's position
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, Vector3.down, out hit, groundCheckDistance, groundLayer))
+        Vector3 rayOrigin = transform.position;
+        Vector3 rayDirection = Vector3.down;
+
+        Debug.DrawRay(rayOrigin, rayDirection * groundCheckDistance, Color.red);
+
+        if (Physics.Raycast(rayOrigin, rayDirection, out hit, groundCheckDistance, groundLayer))
         {
+            Debug.Log("hit.name: " + hit.transform.name);
             isGrounded = true;
         }
         else
@@ -79,5 +85,7 @@ public class TapAction : MonoBehaviour
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
+
+        Debug.Log("isGrounded: " + isGrounded);
     }
 }
