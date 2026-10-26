@@ -498,7 +498,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 983122150}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8fe9ace6a8146b2448c41f213f711549, type: 3}
   m_Name: 
@@ -578,7 +578,7 @@ GameObject:
   - component: {fileID: 689868065}
   - component: {fileID: 689868064}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Obstacle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -630,7 +630,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: e98c1244f51eb074aa6493146725f21a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -671,7 +671,7 @@ Transform:
   m_GameObject: {fileID: 689868063}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 15}
+  m_LocalPosition: {x: 0, y: 1, z: 11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -864,7 +864,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 320137831342704184, guid: d4a064d5edc11d74c9d10b9063ccc5ca, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 440359445249682475, guid: d4a064d5edc11d74c9d10b9063ccc5ca, type: 3}
       propertyPath: jumpMode
@@ -872,7 +872,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 440359445249682475, guid: d4a064d5edc11d74c9d10b9063ccc5ca, type: 3}
       propertyPath: jumpForce
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 440359445249682475, guid: d4a064d5edc11d74c9d10b9063ccc5ca, type: 3}
       propertyPath: m_Enabled
@@ -982,9 +982,13 @@ PrefabInstance:
       propertyPath: m_UseGravity
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8606253768657703513, guid: d4a064d5edc11d74c9d10b9063ccc5ca, type: 3}
+      propertyPath: orthographic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9128419807964142040, guid: d4a064d5edc11d74c9d10b9063ccc5ca, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.795558
+      value: 10.795558
       objectReference: {fileID: 0}
     - target: {fileID: 9128419807964142040, guid: d4a064d5edc11d74c9d10b9063ccc5ca, type: 3}
       propertyPath: m_LocalPosition.y
@@ -992,7 +996,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9128419807964142040, guid: d4a064d5edc11d74c9d10b9063ccc5ca, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.44708
+      value: 3.4470782
       objectReference: {fileID: 0}
     - target: {fileID: 9128419807964142040, guid: d4a064d5edc11d74c9d10b9063ccc5ca, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1768,7 +1772,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 62a63ad597a2abe4fb44c06fa95c3a7a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
