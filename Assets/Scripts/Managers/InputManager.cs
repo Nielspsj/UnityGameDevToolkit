@@ -12,33 +12,37 @@ public class InputManager : MonoBehaviour
     //private UnityEvent OnHold;
     [HideInInspector] public UnityEvent<float> OnSwipe; // passes swipe delta (-1 to 1)
 
-    //private Vector2 lastPosition;
+    // Continuous input: -1 = left, 0 = neutral, 1 = right
+    public float horizontalInput { get; private set; }
 
     private void Awake()
     {
+        // Make sure there is only one InputManager.
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
             return;
         }
         Instance = this;
+        // Keep the InputManager when changing scenes.
         DontDestroyOnLoad(gameObject);
     }
 
     private void Update()
     {
-        LeftPressed();
-        RightPressed();
-        JumpPressed();
-        EscapePressed();
+        ReadHorizontalInput();
+        CheckForLeftPress();
+        CheckForRightPress();
+        CheckForJumpPress();
+        CheckForEscapePress();
     }  
 
-    private void LeftPressed()
+    private void CheckForLeftPress()
     {
 #if ENABLE_INPUT_SYSTEM
-        Keyboard k = UnityEngine.InputSystem.Keyboard.current;
+        Keyboard keyboard = UnityEngine.InputSystem.Keyboard.current;
 
-        if (k != null && (k.aKey.wasPressedThisFrame || k.leftArrowKey.wasPressedThisFrame))
+        if (keyboard != null && (keyboard.aKey.wasPressedThisFrame || keyboard.leftArrowKey.wasPressedThisFrame))
         {
             OnSwipe?.Invoke(-1f);
         }
@@ -50,12 +54,12 @@ public class InputManager : MonoBehaviour
 #endif
     }
 
-    private void RightPressed()
+    private void CheckForRightPress()
     {
 #if ENABLE_INPUT_SYSTEM
-        Keyboard k = UnityEngine.InputSystem.Keyboard.current;
+        Keyboard keyboard = UnityEngine.InputSystem.Keyboard.current;
 
-        if (k != null && (k.dKey.wasPressedThisFrame || k.rightArrowKey.wasPressedThisFrame))
+        if (keyboard != null && (keyboard.dKey.wasPressedThisFrame || keyboard.rightArrowKey.wasPressedThisFrame))
         {
             OnSwipe?.Invoke(1f);
         }
@@ -67,14 +71,54 @@ public class InputManager : MonoBehaviour
 #endif
     }
 
-    private void JumpPressed()
+    private void ReadHorizontalInput()
+    {
+        horizontalInput = 0f;
+
+#if ENABLE_INPUT_SYSTEM
+        Keyboard keyboard = Keyboard.current;
+
+        if(keyboard != null)
+        {
+            bool leftPressed = keyboard.aKey.isPressed || keyboard.leftArrowKey.isPressed;
+            bool rightPressed = keyboard.dKey.isPressed || keyboard.rightArrowKey.isPressed;
+
+            // Move left only when the left keys are pressed
+            if(leftPressed && !rightPressed)
+            {
+                horizontalInput = -1f;
+            }
+
+            // Move right only when the right keys are pressed
+            if (rightPressed && !leftPressed)
+            {
+                horizontalInput = 1f;
+            }
+        }
+#else
+        bool leftPressed = Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow);
+
+        bool rightPressed = Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow);
+
+        if (leftPressed && !rightPressed)
+        {
+            HorizontalInput = -1f;
+        }
+
+        if (rightPressed && !leftPressed)
+        {
+            HorizontalInput = 1f;
+        }
+#endif
+    }
+
+    private void CheckForJumpPress()
     {
 #if ENABLE_INPUT_SYSTEM
-        Keyboard k = UnityEngine.InputSystem.Keyboard.current;
+        Keyboard keyboard = UnityEngine.InputSystem.Keyboard.current;
 
-        if (k != null && (k.spaceKey.wasPressedThisFrame || k.wKey.wasPressedThisFrame || k.upArrowKey.wasPressedThisFrame))
+        if (keyboard != null && (keyboard.spaceKey.wasPressedThisFrame || keyboard.wKey.wasPressedThisFrame || keyboard.upArrowKey.wasPressedThisFrame))
         {
-            Debug.Log("jumpPressed");
             OnTap?.Invoke();
         }
 #else
@@ -85,12 +129,12 @@ public class InputManager : MonoBehaviour
 #endif
     }
 
-    private void EscapePressed()
+    private void CheckForEscapePress()
     {
 #if ENABLE_INPUT_SYSTEM
-        Keyboard k = UnityEngine.InputSystem.Keyboard.current;
+        Keyboard keyboard = UnityEngine.InputSystem.Keyboard.current;
 
-        if (k != null && (k.escapeKey.wasPressedThisFrame))
+        if (keyboard != null && (keyboard.escapeKey.wasPressedThisFrame))
         {
             OnPause.Invoke();
         }
@@ -99,7 +143,7 @@ public class InputManager : MonoBehaviour
         {
             OnPause.Invoke();
         }
-#endif        
+#endif
     }
 
 }

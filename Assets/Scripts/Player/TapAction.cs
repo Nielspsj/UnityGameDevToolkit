@@ -72,7 +72,6 @@ public class TapAction : MonoBehaviour
 
         if (Physics.Raycast(rayOrigin, rayDirection, out hit, groundCheckDistance, groundLayer))
         {
-            Debug.Log("hit.name: " + hit.transform.name);
             isGrounded = true;
         }
         else
@@ -85,7 +84,5 @@ public class TapAction : MonoBehaviour
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
-
-        Debug.Log("isGrounded: " + isGrounded);
     }
 }

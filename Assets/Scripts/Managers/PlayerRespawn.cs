@@ -18,6 +18,7 @@ public class PlayerRespawn : MonoBehaviour
         RPressed();
     }
 
+    //For quick developer respawn. Otherwise just disable this method and have the player respawn when dead.
     private void RPressed()
     {
 #if ENABLE_INPUT_SYSTEM
