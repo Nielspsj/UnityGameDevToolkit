@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
 
 [InfoHeaderClass("Just drag me into the scene and forget about me =(")]
 public class InputManager : MonoBehaviour
@@ -26,39 +27,78 @@ public class InputManager : MonoBehaviour
 
     private void Update()
     {
-        // Example: press Escape 
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            OnPause.Invoke();
-        }
+        LeftPressed();
+        RightPressed();
+        JumpPressed();
+        EscapePressed();
+    }  
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            OnTap?.Invoke();
-        }
+    private void LeftPressed()
+    {
 #if ENABLE_INPUT_SYSTEM
-        var left = UnityEngine.InputSystem.Keyboard.current;
-        if (left.aKey.wasPressedThisFrame || left.leftArrowKey.wasPressedThisFrame)
+        Keyboard k = UnityEngine.InputSystem.Keyboard.current;
+
+        if (k != null && (k.aKey.wasPressedThisFrame || k.leftArrowKey.wasPressedThisFrame))
         {
             OnSwipe?.Invoke(-1f);
         }
 #else
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
         {
             OnSwipe?.Invoke(-1f);
         }
 #endif
+    }
+
+    private void RightPressed()
+    {
 #if ENABLE_INPUT_SYSTEM
-        var right = UnityEngine.InputSystem.Keyboard.current;
-        if (right.dKey.wasPressedThisFrame || right.rightArrowKey.wasPressedThisFrame)
+        Keyboard k = UnityEngine.InputSystem.Keyboard.current;
+
+        if (k != null && (k.dKey.wasPressedThisFrame || k.rightArrowKey.wasPressedThisFrame))
         {
             OnSwipe?.Invoke(1f);
         }
 #else
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
         {
             OnSwipe?.Invoke(1f);
         }
 #endif
     }
+
+    private void JumpPressed()
+    {
+#if ENABLE_INPUT_SYSTEM
+        Keyboard k = UnityEngine.InputSystem.Keyboard.current;
+
+        if (k != null && (k.spaceKey.wasPressedThisFrame || k.wKey.wasPressedThisFrame || k.upArrowKey.wasPressedThisFrame))
+        {
+            OnTap?.Invoke();
+        }
+#else
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W || Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            OnTap?.Invoke();
+        }
+#endif
+    }
+
+    private void EscapePressed()
+    {
+#if ENABLE_INPUT_SYSTEM
+        Keyboard k = UnityEngine.InputSystem.Keyboard.current;
+
+        if (k != null && (k.escapeKey.wasPressedThisFrame))
+        {
+            OnPause.Invoke();
+        }
+#else
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            OnPause.Invoke();
+        }
+#endif        
+    }
+
 }
