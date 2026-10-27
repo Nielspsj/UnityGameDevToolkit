@@ -54,13 +54,10 @@ public class SwerveController : MonoBehaviour
 
     public void HandleSwipe(float direction)
     {
-        Debug.Log("Swipe received: " + direction);
-
         if (swerveMode == SwerveMode.Pan)
         {
             // Save the requested movement for the physics update.
             pendingPan += direction * panDistance;
-            Debug.Log("pan");
             //HandlePan(direction);
         }
         else if (swerveMode == SwerveMode.Turn)
