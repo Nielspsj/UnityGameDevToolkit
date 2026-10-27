@@ -13,18 +13,22 @@ public class TapAction : MonoBehaviour
 
     [SerializeField, Header("Force applied upward when tapping")]
     private float jumpForce = 5f;
+    [SerializeField, Header("Fall Settings")]
+    private float fallMultiplier = 2.5f;
+    [SerializeField] private float lowJumpMultiplier = 2f;
+
     [SerializeField, Header("How far to check for ground")]
     private float groundCheckDistance = 1.1f; // How far down to check for ground
-    [SerializeField, Header("Put the ground in the groundLayer")]
+    [SerializeField, Header("Put the ground in the groundLayer. Set the Layer of the ground to Ground in the Inspector.")]
     private LayerMask groundLayer;
 
-    private Rigidbody rb;
+    private Rigidbody rigidBody;
     private bool isGrounded = true;                // Store if player is touching the ground
 
 
     private void Awake()
-    {        
-        rb = GetComponent<Rigidbody>();
+    {
+        rigidBody = GetComponent<Rigidbody>();
     }    
 
     private void Start()
@@ -57,7 +61,7 @@ public class TapAction : MonoBehaviour
 
     private void JumpEndless()
     {
-        rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        rigidBody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
     }
 
     private void JumpSingle()
@@ -82,7 +86,21 @@ public class TapAction : MonoBehaviour
         // --- Jump Input ---
         if (isGrounded == true)
         {
-            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            rigidBody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (rigidBody.linearVelocity.y < 0)
+        {
+            // Fall faster when moving downward
+            rigidBody.linearVelocity += Vector3.up * Physics.gravity.y * (fallMultiplier - 1) * Time.fixedDeltaTime;
+        }
+        else if (rigidBody.linearVelocity.y > 0)
+        {
+            // Make upward movement snappier
+            rigidBody.linearVelocity += Vector3.up * Physics.gravity.y * (lowJumpMultiplier - 1) * Time.fixedDeltaTime;
         }
     }
 }
