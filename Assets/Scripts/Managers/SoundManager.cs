@@ -3,7 +3,7 @@ using UnityEngine;
 [RequireComponent(typeof(AudioSource))]
 public class SoundManager : MonoBehaviour
 {
-    public static SoundManager Instance;
+    public static SoundManager instance;
 
     [SerializeField, Header("Drag into scene. Play music across levels or sound effects once.")]
     public AudioSource musicSource;
@@ -11,9 +11,17 @@ public class SoundManager : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance == null) Instance = this;
-        else Destroy(gameObject);
-
+        //Check if a SoundManager does not exist
+        //Destroy this SoundManager if another exists
+        //Don't destroy this SoundManager when we load a new scene
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
         DontDestroyOnLoad(gameObject);
     }
 
